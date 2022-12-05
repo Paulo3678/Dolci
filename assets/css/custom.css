@@ -3,9 +3,382 @@
 
 
 :root{
-
+    --cinza: #868789;
+    --cinza-escuro: #4d4d4f;
+    --azul-marinho: #59C1BD;
+    --cta: #FFBF00;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
+}
+
+a:hover{
+    text-decoration: none;
+}
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+button:focus{
+    outline: none;
+}
+
+/* MENU */
+#menu{
+    padding: 10px;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 90;
+}
+#menu .nav-link{
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* HEADER */
+
+header{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--cinza-escuro);
+    margin-top: 76px;
+}
+
+#headerCarousel .carousel-inner{
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+#headerCarousel .carousel-item h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* SERVIÇOS */
+
+#servicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicos .image, #servicos .content-main{
+    width: 50%;
+    height: 600px;
+}
+#servicos .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#servicos .content-main .area-card-servicos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#servicos .content-main .area-card-servicos .card-servicos{
+    width: 50%;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    overflow-y: hidden;
+}   
+#servicos .content-main .area-card-servicos .card-servicos .image{
+    width: 100%;
+    height: 100%;
+}
+#servicos .content-main .area-card-servicos .card-servicos .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#servicos .content-main .area-card-servicos .card-servicos h4{
+    margin-bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+
+#servicos .content-main .area-card-servicos .card-servicos .about{
+    background-color: rgba(0, 0, 0, 0.24);
+    text-align: center;
+    position: absolute;
+    bottom: -80%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all .3s ease-out;
+}
+
+#servicos .content-main .area-card-servicos .card-servicos:hover > .about{
+    bottom: 0;
+    align-items: center;
+}
+
+#servicos .content-main .area-card-servicos .card-servicos .about a{
+    background-color: var(--azul-marinho);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+
+/* CHAMDA #1 */
+
+#cham1{
+    padding: 40px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),url("../images/banners/chmada1.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+}
+
+#cham1 h2{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#cham1 .cta a{
+    background-color: var(--cta);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 20px 30px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+/* PROVA */
+
+#prova{
+    padding: 50px 0;
+}
+
+#prova .area-depoimentos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#prova .area-depoimentos .card-depoimetos{
+    background-color: #fff;
+    padding: 20px;
+    width: 45%;
+    margin: 20px;
+}
+#prova .area-depoimentos .card-depoimetos img{
+    width: 50px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+#prova .area-depoimentos .card-depoimetos .header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#prova .area-depoimentos .card-depoimetos .stars i{
+    color: #ffde00;
+    filter: drop-shadow(1px 0px 0px #F57328);
+}
+
+/* JORNADA DO PACIENTE */
+#jornada{
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+#jornada h2{
+    margin-bottom: 40px;
+}
+
+#jornada .area-card-etapas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#jornada .area-card-etapas .card-etapa{
+    width: 45%;
+    margin: 10px;
+    text-align: center;
+}
+
+#jornada .area-card-etapas .card-etapa i{
+    border: 2px solid var(--azul-marinho);
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#jornada .area-card-etapas .card-etapa h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* CONTATO */
+#contato{
+    padding: 50px 0;
+}
+
+#contato form{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+
+#contato form input, #contato form textarea{
+    padding: 30px 20px;
+}
+
+#contato form h2{
+    margin-bottom: 20px;
+}
+
+#contato form button{
+    border: none;
+    background-color: var(--azul-marinho);
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 20px 30px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* SOBRE */
+#sobre {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#sobre video{
+    width: 100%;
+}
+
+#sobre .cta a{
+    display: inline-block;
+    background-color: var(--cta);
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+
+/* RODAPÉ */
+
+footer{
+    padding: 20px;
+}
+
+footer ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer a{
+    color: #000;
+}
+
+
+footer .desen a{
+    color: var(--azul-marinho);
+    font-weight: bold;
+}
+
+
+
+
+/* WHATSAPP */
+
+#modalWhatsapp button.cta {
+    color: #000;
+    background-color: var(--cta);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    transition: all .5s;
+    border: none;
+    outline: none;
+    width: 100%;
+    transition: all .3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#modalWhatsapp button.cta:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-whatsapp-pulse {
+    background: #25d366;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    padding: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
+    }
+
+    80% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
 }
